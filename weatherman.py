@@ -8,7 +8,6 @@ parser.add_argument("-c", help="Year/Month for 2 bars")
 parser.add_argument("-f", help="Year/Month for 1 bar")
 parser.add_argument("d", help="Directory Path")
 args = parser.parse_args()
-print(args, '\n') #-----------------------------
 
 input_dir_path = args.d
 files = os.listdir(input_dir_path)

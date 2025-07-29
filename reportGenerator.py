@@ -30,7 +30,7 @@ def get_year_report(input_dir_path, files, year):
 
     if max_temp_row is not None:
         # highest temperature and day
-        max_temp = str(max_temp_row['Max TemperatureC'])+'C'
+        max_temp = str(int(max_temp_row['Max TemperatureC']))+'C'
         formatted_max_temp_date = max_temp_row['PKT'].strftime('%B %d')
         print(f"Highest: {max_temp} on {formatted_max_temp_date}")
     else:
@@ -38,7 +38,7 @@ def get_year_report(input_dir_path, files, year):
 
     if min_temp_row is not None:
         # lowest temperature and day
-        min_temp = str(min_temp_row['Min TemperatureC'])+'C'
+        min_temp = str(int(min_temp_row['Min TemperatureC']))+'C'
         formatted_min_temp_date = min_temp_row['PKT'].strftime('%B %d')
         print(f"Lowest: {min_temp} on {formatted_min_temp_date}")
     else:
@@ -46,7 +46,7 @@ def get_year_report(input_dir_path, files, year):
 
     if max_humid_row is not None:
         # most humid day and humidity
-        max_humid = str(max_humid_row['Max Humidity']) + '%'
+        max_humid = str(int(max_humid_row['Max Humidity'])) + '%'
         formatted_max_humid_date= max_humid_row['PKT'].strftime('%B %d')
         print(f"Most Humid: {max_humid} on {formatted_max_humid_date}\n")
     else:
